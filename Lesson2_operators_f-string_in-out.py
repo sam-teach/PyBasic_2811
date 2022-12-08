@@ -105,8 +105,25 @@
 # print('Меня зовут', name, 'и мне', age, 'лет')
 # print(f'Меня зовут {name} и мне {age} лет') # <- f(форматированная)-строка
 
-data_from_user = input('Описание чего вы ожидаете от пользователя')
-print(type(data_from_user), data_from_user)
+# data_from_user = input('Описание чего вы ожидаете от пользователя')
+# print(type(data_from_user), data_from_user)
+#
+# int_from_user = int(input('Введи число: '))
+# print(type(int_from_user), int_from_user)
 
-int_from_user = int(input('Введи число: '))
-print(type(int_from_user), int_from_user)
+# examples
+'''
+Программа для подсчета суммы двух чисел
+'''
+num1 = float(input('Введите число: '))
+num2 = float(input('Еще одно: '))
+print(f'{num1} + {num2} = {num1 + num2}')
+
+radius = float(input('Введите радиус окружности: '))
+print(f'Площадь окружности {3.14 * radius ** 2}')
+
+number = int(input('Введите трехзначное число: '))
+print(f'В этом числе '
+      f'{number%10} единиц, '
+      f'{number//10%10} десятков, '
+      f'{number//100} сотен')
