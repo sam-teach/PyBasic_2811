@@ -98,9 +98,15 @@
 # some_another_string = 'Мама мыла раму'
 # print('мыла' in some_another_string)
 
-name = 'Taras'
-age = 12
-# Меня зовут name и мне age лет
-print('Меня зовут ' + name + ' и мне ' + str(age) + ' лет')
-print('Меня зовут', name, 'и мне', age, 'лет')
-print(f'Меня зовут {name} и мне {age} лет') # <- f(форматированная)-строка
+# name = 'Taras'
+# age = 12
+# # Меня зовут name и мне age лет
+# print('Меня зовут ' + name + ' и мне ' + str(age) + ' лет')
+# print('Меня зовут', name, 'и мне', age, 'лет')
+# print(f'Меня зовут {name} и мне {age} лет') # <- f(форматированная)-строка
+
+data_from_user = input('Описание чего вы ожидаете от пользователя')
+print(type(data_from_user), data_from_user)
+
+int_from_user = int(input('Введи число: '))
+print(type(int_from_user), int_from_user)
