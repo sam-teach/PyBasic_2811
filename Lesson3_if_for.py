@@ -159,3 +159,5 @@ for i in range(start_range, end_range + 1):
             break
 else:  # 'Выполняется этот код только если не сработал break'
     print("чисел кратных пяти меньше пяти")
+
+
