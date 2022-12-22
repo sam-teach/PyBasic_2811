@@ -35,28 +35,42 @@
 
 # обращение к элементам
 #     0  1  2  3  4  5 0    1    2      6
-li = [1, 2, 3, 4, 5, ['a', 'b', 'c'], 'Anatoliy']
+# li = [1, 2, 3, 4, 5, ['a', 'b', 'c'], 'Anatoliy']
+# print('li', li)
+# print('li[2]', li[2])
+# print('li[5]', li[5])
+# print('li[5][1]', li[5][1])  # обращение к элементу списка в списке
+# # пример списка в списке - матрица
+# matrix = [
+#     [1, 2, 3, 4, 5],
+#     [2, 4, 1, 5, 6],
+#     [1, 1, 0, 3, 5],
+# ]
+# print('li[2:5]', li[2:5])  # срез
+# print('li[-2]', li[-2])  # отрицательный индекс
+# # перебор списка по индексу
+# print('''for index in range(len(li)):
+#     print(li[index], end=' ')''')
+# for index in range(len(li)):
+#     print(li[index], end=' ')
+# print()
+# # перебор списка по элементно
+# print('''for element in li:
+#      print(element, end=' ')''')
+# for element in li:
+#     print(element, end=' ')
+# print()
+
+# изменение списка
+li = [1, 2, 3, 4, 5]
 print('li', li)
-print('li[2]', li[2])
-print('li[5]', li[5])
-print('li[5][1]', li[5][1])  # обращение к элементу списка в списке
-# пример списка в списке - матрица
-matrix = [
-    [1, 2, 3, 4, 5],
-    [2, 4, 1, 5, 6],
-    [1, 1, 0, 3, 5],
-]
-print('li[2:5]', li[2:5])  # срез
-print('li[-2]', li[-2])  # отрицательный индекс
-# перебор списка по индексу
-print('''for index in range(len(li)):
-    print(li[index], end=' ')''')
-for index in range(len(li)):
-    print(li[index], end=' ')
-print()
-# перебор списка по элементно
-print('''for element in li:
-     print(element, end=' ')''')
-for element in li:
-    print(element, end=' ')
-print()
+li[2] = 999  # изменение одного элемента по индексу
+print('li', li)
+li[1:4] = [111, 222, 333, 444]  # изменение части списка с обращением по срезу(заменяется на другой список)
+print('li', li)
+print(li[::2])
+li[::2] = [5, 55, 555]  # элементы выбранные слева меняются на элементы справа
+print('li', li)
+# python style
+li[1], li[3] = li[3], li[1]
+print('li', li)
