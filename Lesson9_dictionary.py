@@ -104,18 +104,28 @@
 # li = list(person)
 # print(li)
 
+# '''
+# проверка на вхождение в словарь
+# '''
+# cube_dict = {
+#     1: 'one',
+#     2: 'two',
+#     3: 'three',
+#     4: 'four',
+#     5: 'five',
+#     6: 'six'
+# }
+# print(2 in cube_dict)
+# print(2 in cube_dict.keys())
+# print('two' in cube_dict)
+# print('two' in cube_dict.values())
+
 '''
-проверка на вхождение в словарь
+представление словарей (генератор)
 '''
-cube_dict = {
-    1: 'one',
-    2: 'two',
-    3: 'three',
-    4: 'four',
-    5: 'five',
-    6: 'six'
-}
-print(2 in cube_dict)
-print(2 in cube_dict.keys())
-print('two' in cube_dict)
-print('two' in cube_dict.values())
+
+my_dict = {i: i * i for i in range(10)}
+print(my_dict)
+names = ['Ann', 'Nick', 'Helga', 'Natan']
+n = {names.index(i): i for i in names}
+print(n)
