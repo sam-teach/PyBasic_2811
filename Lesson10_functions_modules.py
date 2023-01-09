@@ -60,22 +60,37 @@
 # test_fun(a)
 # print('out fun', a)
 
+# '''
+# аргументы функций по умолчанию
+# '''
+#
+#
+# def test_fun(arg1='Default_arg1', arg2='Default_arg2') -> None:
+#     print(arg1, arg2)
+#
+#
+# test_fun(1, 2)
+# test_fun(1)
+# test_fun()
+#
+# '''
+# именованные аргументы
+# '''
+# test_fun(arg2=123)
+
 '''
-аргументы функций по умолчанию
+переменное количество аргументов
 '''
 
 
-def test_fun(arg1='Default_arg1', arg2='Default_arg2') -> None:
-    print(arg1, arg2)
+def print_names(*names, format=None):
+    if format == 'cap':
+        result = [i.capitalize() for i in names]
+    elif format == 'low':
+        result = [i.lower() for i in names]
+    else:
+        result=[i for i in names]
+    print(result, '<-', type(result))
 
 
-test_fun(1, 2)
-test_fun(1)
-test_fun()
-
-'''
-именованные аргументы
-'''
-test_fun(arg2=123)
-
-
+print_names('vasa', 'peTya', 'KaTyA')
