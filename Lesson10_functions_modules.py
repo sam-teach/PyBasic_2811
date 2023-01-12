@@ -78,19 +78,51 @@
 # '''
 # test_fun(arg2=123)
 
+# '''
+# переменное количество аргументов
+# '''
+#
+#
+# def print_names(*names, format=None):
+#     if format == 'cap':
+#         result = [i.capitalize() for i in names]
+#     elif format == 'low':
+#         result = [i.lower() for i in names]
+#     else:
+#         result=[i for i in names]
+#     print(result, '<-', type(result))
+#
+#
+# print_names('vasa', 'peTya', 'KaTyA')
+
 '''
-переменное количество аргументов
+модули
 '''
+# # подключение модуля
+# import Lesson10_example_module
+#
+# # при использовании необходимо указать имя модуля
+# Lesson10_example_module.fun()
+# print(Lesson10_example_module.num)
+# # просмотр содержимого модуля
+# print(dir(Lesson10_example_module))
 
+# # произвольное имя модуля
+# import Lesson10_example_module as Le10
+#
+# Le10.fun()
 
-def print_names(*names, format=None):
-    if format == 'cap':
-        result = [i.capitalize() for i in names]
-    elif format == 'low':
-        result = [i.lower() for i in names]
-    else:
-        result=[i for i in names]
-    print(result, '<-', type(result))
+# # подключение отдельного элемента из модуля
+# from Lesson10_example_module import num, fun
+#
+# print(num)
+# fun()
 
-
-print_names('vasa', 'peTya', 'KaTyA')
+# подключение всех элементов из модуля
+# from Lesson10_example_module import *
+#
+# print(num)
+# fun()
+import Lesson10_example_module as L10
+print(__name__)
+# L10.print_module_name()
