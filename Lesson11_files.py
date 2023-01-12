@@ -16,8 +16,8 @@ obj -> переменная хранящая набор инструментов
 obj = open("files/test.txt", "wt")
 obj = open("files/test.txt", "rt+")
 '''
-obj = open("files/test.txt", "wt")
-obj.close()
+# obj = open("files/test.txt", "wt")
+# obj.close()
 
 # with -> менеджер контекста - позволяет автоматически закрывать файл
 #  при выходе за пределы его(менеджера) области видимости
@@ -25,5 +25,18 @@ obj.close()
 #     делаем что-нибудь
 # <- обасть видимости закрылась
 
+# with open("files/test.txt", "wt") as file:
+#     print(file.name)
+#     print(file.mode)
+#     print(file.closed)
+#     print(file.encoding)
+
+# запись в файл
 with open("files/test.txt", "wt") as file:
-    pass
+    print(file.write('Hello World!'))
+
+li = ['123', 'qwe', '654']
+with open("files/test.txt", "wt") as file:
+    # file.writelines(li)
+    file.writelines([i+'\n' for i in li])
+# чтение из файла
