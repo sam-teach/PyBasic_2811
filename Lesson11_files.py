@@ -32,11 +32,27 @@ obj = open("files/test.txt", "rt+")
 #     print(file.encoding)
 
 # запись в файл
-with open("files/test.txt", "wt") as file:
-    print(file.write('Hello World!'))
+# with open("files/test.txt", "wt") as file:
+#     print(file.write('Hello World!'))
 
-li = ['123', 'qwe', '654']
-with open("files/test.txt", "wt") as file:
-    # file.writelines(li)
-    file.writelines([i+'\n' for i in li])
+# li = ['123', 'qwe', '654']
+# with open("files/test.txt", "at") as file:
+#     # file.writelines(li)
+#     file.writelines([i+'\n' for i in li])
 # чтение из файла
+with open("files/test.txt", "rt") as file:
+    result = file.read()
+    print('read() -> ', result)
+
+with open("files/test.txt", "rt") as file:
+    result = file.read(5)
+    print('read(5) -> ', result)
+    print(file.read(6))
+
+with open("files/test.txt", "rt") as file:
+    result = file.readline()
+    print('readline() -> ', result)
+
+with open("files/test.txt", "rt") as file:
+    result = file.readlines()
+    print('readlines() -> ', result)
