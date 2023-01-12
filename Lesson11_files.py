@@ -40,19 +40,42 @@ obj = open("files/test.txt", "rt+")
 #     # file.writelines(li)
 #     file.writelines([i+'\n' for i in li])
 # чтение из файла
-with open("files/test.txt", "rt") as file:
-    result = file.read()
-    print('read() -> ', result)
+# with open("files/test.txt", "rt") as file:
+#     result = file.read()
+#     print('read() -> ', result)
+#
+# with open("files/test.txt", "rt") as file:
+#     result = file.read(5)
+#     print('read(5) -> ', result)
+#     print(file.read(6))
+#
+# with open("files/test.txt", "rt") as file:
+#     result = file.readline()
+#     print('readline() -> ', result)
+#
+# with open("files/test.txt", "rt") as file:
+#     result = file.readlines()
+#     print('readlines() -> ', result)
 
-with open("files/test.txt", "rt") as file:
-    result = file.read(5)
-    print('read(5) -> ', result)
-    print(file.read(6))
+'''
+примеры функций для обработки файлов
+'''
 
-with open("files/test.txt", "rt") as file:
-    result = file.readline()
-    print('readline() -> ', result)
 
-with open("files/test.txt", "rt") as file:
-    result = file.readlines()
-    print('readlines() -> ', result)
+def read_txt_files(filename: str):
+    with open(filename, 'rt') as file:
+        data = file.read()
+        return data
+
+
+def write_txt_file(filename: str, data):
+    with open(filename, 'wt') as file:
+        file.write(str(data))
+
+
+count = 0
+text = read_txt_files('files/London.txt')
+for word in text.split():
+    if word == 'London':
+        count += 1
+print(f'London: {count}')
