@@ -75,4 +75,7 @@ def add_grade_to_stud_list(subj: str):
     write_to_csv('files/Книга2.csv', student_list)
 
 
-add_grade_to_stud_list('Физкультура')
+# add_grade_to_stud_list('Физкультура')
+
+
+
