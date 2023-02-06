@@ -50,3 +50,41 @@ class Employee_with_salary(Employee):
 
 # obj = Employee_with_salary('Taras', 'dev', 1000000)
 # print(Employee_with_salary.__mro__)
+
+'''
+множественное наследование
+'''
+
+
+class Roga:
+    def __init__(self, size: str):
+        self.__size = size
+
+    @property
+    def size(self):
+        return self.__size
+
+
+class Kopyta:
+    def __init__(self, color: str):
+        self.__color = color
+
+    @property
+    def color(self):
+        return self.__color
+
+    @color.setter
+    def color(self, color: str):
+        self.__color = color
+
+
+class Los(Roga, Kopyta):
+    def __init__(self, roga_size: str, kopyta_color: str):
+        super().__init__(roga_size)
+        self.color = kopyta_color
+
+
+obj = Los('Big', 'Brown')
+print(obj.size)
+print(obj.color)
+print(Los.__mro__)
