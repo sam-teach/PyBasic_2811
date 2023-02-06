@@ -108,6 +108,8 @@ obj = Person('a', 'b', 12)
 print(obj)
 obj.phone = '0890329875023789'
 print(obj)
+print(obj.var)
+
 class Family:
 
     def __init__(self):
