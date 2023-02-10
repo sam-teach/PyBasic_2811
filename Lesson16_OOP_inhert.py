@@ -81,7 +81,7 @@ class Kopyta:
 class Los(Roga, Kopyta):
     def __init__(self, roga_size: str, kopyta_color: str):
         super().__init__(roga_size)
-        self.color = kopyta_color
+        Kopyta.__init__(Los,kopyta_color)
 
 
 obj = Los('Big', 'Brown')
